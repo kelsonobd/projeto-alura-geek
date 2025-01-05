@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce de CDs</title>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -11,29 +12,43 @@
 <body>
     <header>
         <div class="logo">
-            <img src="/assets/images/logo.png" class="img-logo"> 
+            <img src="/assets/images/logo.png" class="img-logo">
         </div>
         <div class="titulo">
-        <h1>THEO STORE - Cadastro</h1>
+            <h1>THEO STORE - Cadastro</h1>
         </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar produtos..." class="search-input">
+            <button id="search-button" class="search-button">
+                🔍
+            </button>
     </header>
 
     <main class="container">
-        <section class="product-section">
+        <section class="product-section" id="cardsAlbuns">
             <h2>Produtos Cadastrados</h2>
             <div class="cards-container">
                 <div class="cards-container-itens">
                     <div class="card">
                         <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
                         <div class="info">
-                            <strong>Born To Die</strong>
-                            <span>Lana Del Rey</span>
+                            <strong>Nome do CD</strong>
+                            <span>Cantor</span>
                             <span>R$ 29,90</span>
                         </div>
-                        <button>🗑️</button>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
                     </div>
                 </div>
-                <div class="cards-container">
+                <div class="cards-container-itens">
                     <div class="card">
                         <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
                         <div class="info">
@@ -41,10 +56,39 @@
                             <span>Cantor</span>
                             <span>R$ 29,90</span>
                         </div>
-                        <button>🗑️</button>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
                     </div>
                 </div>
-                <div class="cards-container">
+                <div class="cards-container-itens">
+                    <div class="card">
+                        <img src="/assets/media/lana_born_to_die.jpeg" alt="Imagem do CD" class="cd-image">
+                        <div class="info">
+                            <strong>Nome do CD</strong>
+                            <span>Cantor</span>
+                            <span>R$ 29,90</span>
+                        </div>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="cards-container-itens">
                     <div class="card">
                         <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
                         <div class="info">
@@ -52,10 +96,19 @@
                             <span>Cantor</span>
                             <span>R$ 29,90</span>
                         </div>
-                        <button>🗑️</button>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
                     </div>
                 </div>
-                <div class="cards-container">
+                <div class="cards-container-itens">
                     <div class="card">
                         <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
                         <div class="info">
@@ -63,10 +116,19 @@
                             <span>Cantor</span>
                             <span>R$ 29,90</span>
                         </div>
-                        <button>🗑️</button>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
                     </div>
                 </div>
-                <div class="cards-container">
+                <div class="cards-container-itens">
                     <div class="card">
                         <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
                         <div class="info">
@@ -74,10 +136,19 @@
                             <span>Cantor</span>
                             <span>R$ 29,90</span>
                         </div>
-                        <button>🗑️</button>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
                     </div>
                 </div>
-                <div class="cards-container">
+                <div class="cards-container-itens">
                     <div class="card">
                         <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
                         <div class="info">
@@ -85,23 +156,220 @@
                             <span>Cantor</span>
                             <span>R$ 29,90</span>
                         </div>
-                        <button>🗑️</button>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="cards-container-itens">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
+                        <div class="info">
+                            <strong>Nome do CD</strong>
+                            <span>Cantor</span>
+                            <span>R$ 29,90</span>
+                        </div>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="cards-container-itens">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
+                        <div class="info">
+                            <strong>Nome do CD</strong>
+                            <span>Cantor</span>
+                            <span>R$ 29,90</span>
+                        </div>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="cards-container-itens">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
+                        <div class="info">
+                            <strong>Nome do CD</strong>
+                            <span>Cantor</span>
+                            <span>R$ 29,90</span>
+                        </div>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="cards-container-itens">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
+                        <div class="info">
+                            <strong>Nome do CD</strong>
+                            <span>Cantor</span>
+                            <span>R$ 29,90</span>
+                        </div>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="cards-container-itens">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
+                        <div class="info">
+                            <strong>Nome do CD</strong>
+                            <span>Cantor</span>
+                            <span>R$ 29,90</span>
+                        </div>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="cards-container-itens">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
+                        <div class="info">
+                            <strong>Nome do CD</strong>
+                            <span>Cantor</span>
+                            <span>R$ 29,90</span>
+                        </div>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="cards-container-itens">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
+                        <div class="info">
+                            <strong>Nome do CD</strong>
+                            <span>Cantor</span>
+                            <span>R$ 29,90</span>
+                        </div>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
+                    </div>
+                </div>
+                <div class="cards-container-itens">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="Imagem do CD" class="cd-image">
+                        <div class="info">
+                            <strong>Nome do CD</strong>
+                            <span>Cantor</span>
+                            <span>R$ 29,90</span>
+                        </div>
+                        <div class="details">
+                            <p><strong>Tipo:</strong> Álbum</p>
+                            <p><strong>Peso:</strong> 120g</p>
+                            <p><strong>Dimensão:</strong> 14cm x 14cm</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+                            <p><strong>Lucro:</strong> R$ 14,90</p>
+                            <p><strong>Estoque:</strong> 10 unidades</p>
+                        </div>
+                        <button class="editar">Editar</button>
+                        <button class="delete">🗑️</button>
                     </div>
                 </div>
 
         </section>
         </div>
 
-        <div class="form-section">
+        <section class="form-section" id="albumForm">
             <h2>Cadastrar Novo Álbum</h2>
             <form>
                 <div class="form-group">
-                    <label for="nome">Nome do Álbum:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite o nome do CD...">
+                    <label for="album">Nome do Álbum:</label>
+                    <input type="text" id="album" name="nome" placeholder="Digite o nome do CD...">
+                </div>
+                <div class="form-group">
+                    <label for="cantor">Nome do cantor:</label>
+                    <input type="text" id="cantor" name="valor" placeholder="Digite o nome do cantor">
                 </div>
                 <div class="form-group">
                     <label for="valor">Valor:</label>
-                    <input type="number" id="valor" name="valor" placeholder="Digite o valor...">
+                    <input type="number" id="valor" name="nome" placeholder="Digite o valor...">
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <input type="text" id="tipo" name="nome" placeholder="Digite o tipo: Álbum, Box, etc...">
+                </div>
+                <div class="form-group">
+                    <label for="peso">Peso (g):</label>
+                    <input type="number" id="peso" name="nome" placeholder="Digite o peso...">
+                </div>
+                <div class="form-group">
+                    <label for="dimensoes">Dimensões (cm):</label>
+                    <input type="number" id="dimensoes" name="nome" placeholder="Digite as dimensões...">
+                </div>
+                <div class="form-group">
+                    <label for="custo">Custo (R$):</label>
+                    <input type="number" id="custo" name="nome" placeholder="Digite o custo...">
+                </div>
+                <div class="form-group">
+                    <label for="lucro">Lucro por item:</label>
+                    <input type="number" id="lucro" name="nome" placeholder="Digite o lucro por item...">
+                </div>
+                <div class="form-group">
+                    <label for="estoque">Estoque (unidades):</label>
+                    <input type="number" id="estoque" name="nome" placeholder="Digite o Estoque">
                 </div>
                 <div class="form-group">
                     <label for="imagem">Imagem:</label>
@@ -111,12 +379,21 @@
                     <button type="submit">Adicionar</button>
                     <button type="button" class="clear">Limpar</button>
                 </div>
+
             </form>
-        </div>
+        </section>
     </main>
     <footer>
-        < <p>&copy; 2025 E-commerce de CDs. Todos os direitos reservados.</p>
+        <div class="redes-sociais">
+            <a href="#"><img class="iconRs" src="./assets/images/linkedin.png" alt="linkedin"></a>
+            <a href="#"><img class="iconRs" src="./assets/images/github.png" alt="github"></a>
+            <a href="#"> <img class="iconRs" src="./assets/images/instagram.png" alt="instagram"></a>
+        </div>
+        <p>&copy; 2025 Kelson Oliveira. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
