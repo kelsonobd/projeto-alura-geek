@@ -3,32 +3,137 @@ document.addEventListener("DOMContentLoaded", function () {
   const cardsAlbum = document.getElementById("cardsAlbuns");
   const searchInput = document.getElementById("search-input");
   const searchButton = document.getElementById("search-button");
+  const clearButton = document.getElementById("clear-form");
   const LOCAL_STORAGE_KEY = "albums";
 
-  // Dados Mock (álbuns iniciais)
   const MOCK_ALBUMS = [
-    // Dados de exemplo...
+    {
+      id: "1",
+      nomeAlbum: "Born to Die",
+      nomeCantor: "Lana Del Rey",
+      preco: "R$ 39,90",
+      tipo: "Álbum",
+      peso: "120g",
+      altura: "14cm",
+      largura: "14cm",
+      custo: "R$ 20,00",
+      lucro: "R$ 19,90",
+      estoque: "5",
+      imagem: "assets/media/lana_born_to_die.jpeg",
+    },
+    {
+      id: "2",
+      nomeAlbum: "Chromatica",
+      nomeCantor: "Lady Gaga",
+      preco: "R$ 49,90",
+      tipo: "Álbum",
+      peso: "140g",
+      altura: "14cm",
+      largura: "14cm",
+      custo: "R$ 25,00",
+      lucro: "R$ 24,90",
+      estoque: "7",
+      imagem: "../assets/media/chromatica.jpeg",
+    },
+    {
+      id: "3",
+      nomeAlbum: "Like a Prayer",
+      nomeCantor: "Madonna",
+      preco: "R$ 59,90",
+      tipo: "Álbum",
+      peso: "150g",
+      altura: "15cm",
+      largura: "15cm",
+      custo: "R$ 30,00",
+      lucro: "R$ 29,90",
+      estoque: "8",
+      imagem: "../assets/media/like_prayer.webp",
+    },
+    {
+      id: "4",
+      nomeAlbum: "Dangerous Woman",
+      nomeCantor: "Ariana Grande",
+      preco: "R$ 39,90",
+      tipo: "Álbum",
+      peso: "130g",
+      altura: "14cm",
+      largura: "14cm",
+      custo: "R$ 20,00",
+      lucro: "R$ 19,90",
+      estoque: "6",
+      imagem: "../assets/media/dangerous.jpeg",
+    },
+    {
+      id: "5",
+      nomeAlbum: "Wiped Out!",
+      nomeCantor: "The Neighbourhood",
+      preco: "R$ 44,90",
+      tipo: "Álbum",
+      peso: "140g",
+      altura: "14cm",
+      largura: "14cm",
+      custo: "R$ 22,00",
+      lucro: "R$ 22,90",
+      estoque: "10",
+      imagem: "../assets/media/wiped_out.png",
+    },
+    {
+      id: "6",
+      nomeAlbum: "Ultraviolence",
+      nomeCantor: "Lana Del Rey",
+      preco: "R$ 45,90",
+      tipo: "Álbum",
+      peso: "140g",
+      altura: "14cm",
+      largura: "14cm",
+      custo: "R$ 23,00",
+      lucro: "R$ 22,90",
+      estoque: "4",
+      imagem: "../assets/media/ultraviolence.jpeg",
+    },
+    {
+      id: "7",
+      nomeAlbum: "Sweetener",
+      nomeCantor: "Ariana Grande",
+      preco: "R$ 49,90",
+      tipo: "Álbum",
+      peso: "140g",
+      altura: "14cm",
+      largura: "14cm",
+      custo: "R$ 25,00",
+      lucro: "R$ 24,90",
+      estoque: "9",
+      imagem: "../assets/media/sweetener.jpeg",
+    },
+    {
+      id: "8",
+      nomeAlbum: "Born This Way",
+      nomeCantor: "Lady Gaga",
+      preco: "R$ 54,90",
+      tipo: "Álbum",
+      peso: "150g",
+      altura: "15cm",
+      largura: "15cm",
+      custo: "R$ 27,00",
+      lucro: "R$ 27,90",
+      estoque: "5",
+      imagem: "../assets/media/bornthisway.jpeg",
+    },
   ];
 
-  // Carregar os cards salvos ou mocks
   function loadCardsFromStorage() {
     let albums = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
 
-    // Adiciona apenas os mocks que não estão no localStorage
     MOCK_ALBUMS.forEach((mock) => {
       if (!albums.some((album) => album.id === mock.id)) {
         albums.push(mock);
       }
     });
 
-    // Salva os dados atualizados no localStorage
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(albums));
-
-    // Renderiza os cards na interface
     albums.forEach(addAlbumToCards);
   }
 
-  // Salvar os cards no localStorage
   function saveCardsToStorage() {
     const cards = Array.from(cardsAlbum.querySelectorAll(".card"));
     const albums = cards.map((card) => ({
@@ -49,7 +154,6 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(albums));
   }
 
-  // Função para adicionar um álbum ao DOM
   function addAlbumToCards(album) {
     const card = document.createElement("div");
     card.className = "card";
@@ -80,11 +184,9 @@ document.addEventListener("DOMContentLoaded", function () {
       cardsContainer.appendChild(card);
     }
 
-    // Reassocia eventos aos novos botões
     assignCardEvents(card);
   }
 
-  // Função para associar eventos a um card específico
   function assignCardEvents(card) {
     const editButton = card.querySelector(".editar");
     const deleteButton = card.querySelector(".delete");
@@ -92,7 +194,6 @@ document.addEventListener("DOMContentLoaded", function () {
     editButton.addEventListener("click", function () {
       const cardId = card.dataset.id;
 
-      // Preenche os campos do formulário com os dados do card
       document.getElementById("album").value = card.querySelector(".info strong").textContent || "";
       document.getElementById("cantor").value = card.querySelector(".info span:nth-of-type(1)").textContent || "";
       document.getElementById("valor").value = card.querySelector(".info span:nth-of-type(2)").textContent || "";
@@ -105,18 +206,32 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("estoque").value = card.querySelector(".details p:nth-of-type(7)").textContent.replace("Estoque: ", "") || "";
       document.getElementById("preview").src = card.querySelector("img").src;
 
-      // Define o modo de edição
       form.dataset.editing = cardId;
       form.querySelector("button[type='submit']").textContent = "Salvar Alterações";
     });
 
     deleteButton.addEventListener("click", function () {
-      card.remove();
-      saveCardsToStorage();
+      if (confirm("Tem certeza que deseja apagar o item?")) {
+        card.remove();
+        saveCardsToStorage();
+      }
     });
   }
 
-  // Evento de submissão do formulário
+  // Validação de campos obrigatórios
+  function validateFields() {
+    const fields = [
+      document.getElementById("album").value.trim(),
+      document.getElementById("cantor").value.trim(),
+      document.getElementById("valor").value.trim(),
+      document.getElementById("tipo").value.trim(),
+      document.getElementById("peso").value.trim(),
+    ];
+
+    const filledFields = fields.filter((field) => field !== "").length;
+    return filledFields >= 5;
+  }
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -140,8 +255,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         delete form.dataset.editing;
         form.querySelector("button[type='submit']").textContent = "Adicionar";
+        form.reset();
+        document.getElementById("preview").src = "https://via.placeholder.com/150";
       }
     } else {
+      if (!validateFields()) {
+        alert("Por favor, preencha pelo menos 5 campos antes de adicionar.");
+        return;
+      }
+
       const newAlbum = {
         id: Date.now().toString(),
         nomeAlbum: document.getElementById("album").value,
@@ -159,12 +281,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
       addAlbumToCards(newAlbum);
       saveCardsToStorage();
-    }
 
+      form.reset();
+      document.getElementById("preview").src = "https://via.placeholder.com/150";
+    }
+  });
+
+  clearButton.addEventListener("click", function () {
     form.reset();
     document.getElementById("preview").src = "https://via.placeholder.com/150";
   });
 
-  // Carregar os mocks e dados salvos
+  searchButton.addEventListener("click", function () {
+    const query = searchInput.value.toLowerCase().trim();
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+      const albumName = card.querySelector(".info strong").textContent.toLowerCase();
+      const artistName = card.querySelector(".info span:nth-of-type(1)").textContent.toLowerCase();
+
+      if (albumName.includes(query) || artistName.includes(query)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    if (!query) {
+      cards.forEach((card) => (card.style.display = "block"));
+    }
+  });
+
+  searchInput.addEventListener("input", function () {
+    if (searchInput.value.trim() === "") {
+      const cards = document.querySelectorAll(".card");
+      cards.forEach((card) => (card.style.display = "block"));
+    }
+  });
+
   loadCardsFromStorage();
 });
