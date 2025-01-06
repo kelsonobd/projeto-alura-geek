@@ -1,0 +1,43 @@
+{
+  "albums": [
+    {
+      "id": "cc16",
+      "nomeAlbum": "kel",
+      "nomeCantor": "",
+      "preco": "",
+      "tipo": "",
+      "peso": "",
+      "dimensoes": "",
+      "custo": "",
+      "lucro": "",
+      "estoque": "",
+      "imagem": ""
+    },
+    {
+      "id": "ecd5",
+      "nomeAlbum": "Born To Die",
+      "nomeCantor": "Lana Del Rey",
+      "preco": "35",
+      "tipo": "album",
+      "peso": "120",
+      "dimensoes": "12",
+      "custo": "24",
+      "lucro": "12",
+      "estoque": "1",
+      "imagem": ""
+    },
+    {
+      "id": "6f3c",
+      "nomeAlbum": "Born To Die",
+      "nomeCantor": "lana",
+      "preco": "",
+      "tipo": "",
+      "peso": "",
+      "dimensoes": "",
+      "custo": "",
+      "lucro": "",
+      "estoque": "",
+      "imagem": "C:\\fakepath\\lana_born_to_die.jpeg"
+    }
+  ]
+}
